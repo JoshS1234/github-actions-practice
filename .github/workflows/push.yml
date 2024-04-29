@@ -12,7 +12,7 @@ jobs:
       - run: npm install
       - run: npm install -g bats
       - run: bats -v
-      - run: echo "hello"
+      - run: echo "hello world"
       - run: echo ${{secrets.AUTH_TOKEN}}
       # - run: git remote set-url origin https://x-access-token:${{ secrets.AUTH_TOKEN }}@github.com/JoshS1234/github-actions-practise.git
       - run: npm run deploy
