@@ -10,7 +10,5 @@ jobs:
         with:
           node-version: "20"
       - run: npm install
-      - run: npm install -g bats
-      - run: bats -v
       - run: npm run build
       - run: npm run deploy
