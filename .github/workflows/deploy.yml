@@ -12,4 +12,5 @@ jobs:
       - run: npm install
       - run: npm install -g bats
       - run: bats -v
+      - run: git remote set-url origin git@github.com:JoshS1234/github-actions-practice.git
       - run: npm run deploy
