@@ -12,8 +12,5 @@ jobs:
       - run: npm install
       - run: npm install -g bats
       - run: bats -v
-      - run: echo "hello world"
-      - run: git config --global user.name "JoshS1234"
-      - run: git config --global user.email "joshua.spence@hotmail.co.uk"
-      - run: git remote set-url origin https://${{ secrets.AUTH_TOKEN }}@github.com/JoshS1234/github-actions-practice.git
+      - run: npm run build
       - run: npm run deploy
