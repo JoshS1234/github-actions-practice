@@ -2,7 +2,7 @@ name: pull-request-tests
 run-name: ${{ github.actor }} is doing some testing
 on: [pull_request]
 jobs:
-  check-bats-version:
+  check-app-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
