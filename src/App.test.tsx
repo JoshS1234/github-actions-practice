@@ -26,11 +26,11 @@ it("should increase count by 1 when button pressed", async () => {
   expect(countButton.textContent).toContain("1");
 });
 
-it("deliberate fail", async () => {
-  //arrange
-  render(<App />);
+// it("deliberate fail", async () => {
+//   //arrange
+//   render(<App />);
 
-  //act
-  const countButton = screen.getByRole("button");
-  expect(countButton.textContent).toContain("blah");
-});
+//   //act
+//   const countButton = screen.getByRole("button");
+//   expect(countButton.textContent).toContain("blah");
+// });
