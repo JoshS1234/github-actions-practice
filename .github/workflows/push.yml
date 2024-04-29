@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-          folder: dist
       - run: npm install
       - run: npm run build
+        with: folder:dist
       - run: npm run deploy
