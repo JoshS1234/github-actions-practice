@@ -6,11 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-          folder: dist
       - run: npm install
       - run: npm run build
       - run: npm run deploy
