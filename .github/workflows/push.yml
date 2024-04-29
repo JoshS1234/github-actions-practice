@@ -14,5 +14,5 @@ jobs:
       - run: bats -v
       - run: echo "hello world"
       - run: git config --global user.name "JoshS1234"
-      - run: git remote set-url origin https://${{ secrets.AUTH_TOKEN }}@github.com/JoshS1234/github-actions-practise.git
+      - run: git remote set-url origin https://github.com/JoshS1234/github-actions-practice.git
       - run: npm run deploy
