@@ -1,0 +1,17 @@
+name: push-tests
+run-name: ${{ github.actor }} is doing some deploying
+on: [push]
+jobs:
+  check-app-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install
+      - run: npm install -g bats
+      - run: bats -v
+      - run: echo ${{secrets.AUTH_TOKEN}}
+      # - run: git remote set-url origin https://x-access-token:${{ secrets.AUTH_TOKEN }}@github.com/JoshS1234/github-actions-practise.git
+      - run: npm run deploy
